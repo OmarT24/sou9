@@ -1,9 +1,10 @@
 {
+ 
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sou9": {
+    "app_fruits": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +14,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sou9",
+            "outputPath": "dist/app_fruits",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -64,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sou9:build:production"
+              "browserTarget": "app_fruits:build:production"
             },
             "development": {
-              "browserTarget": "sou9:build:development"
+              "browserTarget": "app_fruits:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sou9:build"
+            "browserTarget": "app_fruits:build"
           }
         },
         "test": {
@@ -97,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4116ac09-f900-44ee-86a4-1e1cc4939ba5"
   }
 }
